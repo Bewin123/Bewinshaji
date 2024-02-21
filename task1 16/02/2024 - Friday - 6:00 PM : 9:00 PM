@@ -1,1 +1,38 @@
 Blog on Difference between HTTP1.1 vs HTTP2
+Introduction:
+
+Significant advancements in web protocols have marked the evolution of the World Wide Web. Two of the most widely used versions, HTTP/1.1 and HTTP/2 have played crucial roles in shaping the way data is transferred between clients and servers. In this blog post, we'll explore the key differences between HTTP//1.1 and HTTP/2, shedding light on how these improvements have enhanced the performance and efficiency of web communication.
+
+Multiplexing and Concurrent Connections:
+
+HTTP/1.1 relies on a single connection per request, leading to a bottleneck when numerous resources need to be loaded simultaneously. This limitation can result in slower page loading times.
+
+HTTP/2 introduces multiplexing, allowing multiple requests and responses to be sent concurrently over a single connection. This feature significantly reduces latency, as it eliminates the need for multiple connections for parallel resource loading.
+
+Header Compression:
+
+In HTTP/1.1, headers are sent with each request and response, leading to redundancy and increased overhead. This redundancy becomes especially pronounced when dealing with numerous small assets.
+
+HTTP/2 addresses this issue through header compression. Headers are compressed before being sent over the network, reducing the amount of data transmitted and improving overall performance.
+
+Binary Protocol:
+
+HTTP/1.1 relies on a text-based protocol, which is human-readable but comes with the drawback of increased verbosity. This verbiage can result in larger packet sizes and slower data transmission.
+
+HTTP/2 adopts a binary protocol, which is more efficient in terms of parsing and transmission. The binary format simplifies communication, making it faster and less error-prone.
+
+Server Push:
+
+HTTP/1.1 requires the browser to request each resource explicitly, leading to suboptimal loading of dependencies and additional latency.
+
+HTTP/2 introduces server push, enabling the server to push resources to the client before they are explicitly requested. This proactive approach enhances performance by reducing the need for multiple round-trip requests.
+
+Stream Prioritization:
+
+HTTP/1.1 treats all resources as equal in terms of priority, leading to potential delays in loading critical assets.
+
+HTTP/2 allows for stream prioritization, enabling the server to assign priorities to different resources. This ensures that vital resources are loaded first, optimizing the user experience.
+
+Conclusion:
+
+The transition from HTTP/1.1 to HTTP/2 represents a significant leap forward in web communication protocols. The improvements in multiplexing, header compression, binary protocol, server push, and stream prioritization collectively contribute to a faster, more efficient, and more responsive web experience. As web technologies continue to evolve, understanding the nuances between these protocols becomes crucial for developers and businesses seeking to deliver optimal user experiences. Whether you're a developer looking to enhance website performance or a user curious about the technologies powering the web, the differences between HTTP/1.1 and HTTP/2 offer valuable insights into the ongoing evolution of the digital landscape.
