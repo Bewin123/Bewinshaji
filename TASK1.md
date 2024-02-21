@@ -1,0 +1,90 @@
+Blog on Difference between HTTP1.1 vs HTTP2
+Introduction:
+Significant advancements in web protocols have marked the evolution of the World Wide Web. Two of the most widely used versions, HTTP/1.1 and HTTP/2 have played crucial roles in shaping the way data is transferred between clients and servers. In this blog post, we'll explore the key differences between HTTP//1.1 and HTTP/2, shedding light on how these improvements have enhanced the performance and efficiency of web communication.
+Multiplexing and Concurrent Connections:
+HTTP/1.1 relies on a single connection per request, leading to a bottleneck when numerous resources need to be loaded simultaneously. This limitation can result in slower page loading times.
+HTTP/2 introduces multiplexing, allowing multiple requests and responses to be sent concurrently over a single connection. This feature significantly reduces latency, as it eliminates the need for multiple connections for parallel resource loading.
+Header Compression:
+In HTTP/1.1, headers are sent with each request and response, leading to redundancy and increased overhead. This redundancy becomes especially pronounced when dealing with numerous small assets.
+HTTP/2 addresses this issue through header compression. Headers are compressed before being sent over the network, reducing the amount of data transmitted and improving overall performance.
+Binary Protocol:
+HTTP/1.1 relies on a text-based protocol, which is human-readable but comes with the drawback of increased verbosity. This verbiage can result in larger packet sizes and slower data transmission.
+HTTP/2 adopts a binary protocol, which is more efficient in terms of parsing and transmission. The binary format simplifies communication, making it faster and less error-prone.
+Server Push:
+HTTP/1.1 requires the browser to request each resource explicitly, leading to suboptimal loading of dependencies and additional latency.
+HTTP/2 introduces server push, enabling the server to push resources to the client before they are explicitly requested. This proactive approach enhances performance by reducing the need for multiple round-trip requests.
+Stream Prioritization:
+HTTP/1.1 treats all resources as equal in terms of priority, leading to potential delays in loading critical assets.
+HTTP/2 allows for stream prioritization, enabling the server to assign priorities to different resources. This ensures that vital resources are loaded first, optimizing the user experience.
+Conclusion:
+The transition from HTTP/1.1 to HTTP/2 represents a significant leap forward in web communication protocols. The improvements in multiplexing, header compression, binary protocol, server push, and stream prioritization collectively contribute to a faster, more efficient, and more responsive web experience. As web technologies continue to evolve, understanding the nuances between these protocols becomes crucial for developers and businesses seeking to deliver optimal user experiences. Whether you're a developer looking to enhance website performance or a user curious about the technologies powering the web, the differences between HTTP/1.1 and HTTP/2 offer valuable insights into the ongoing evolution of the digital landscape.
+
+
+                                                               Blog about objects and their internal representation in Javascript
+Introduction:
+JavaScript, one of the most widely used programming languages, owes much of its versatility to the powerful concept of objects. In this blog post, we will delve into the world of objects in JavaScript, unraveling their internal representations and shedding light on how they contribute to the language's flexibility and dynamism.
+The Basics of Objects in JavaScript:
+In JavaScript, an object is a complex data type that allows developers to structure and organize data using key-value pairs. Objects are versatile and can represent a wide range of entities, from real-world objects to abstract concepts.
+// Example of a simple JavaScript object
+const car = {
+  make: 'Toyota',
+  model: 'Camry',
+  year: 2022,
+  color: 'Blue',
+};
+Internal Representation of Objects:
+Under the hood, JavaScript engines implement objects using various data structures. While the specifics may vary between engines, a common representation involves the use of a combination of dictionaries and hidden classes.
+Dictionaries:
+Objects in JavaScript are often implemented as dictionaries, where each property (key-value pair) is stored as an entry in the dictionary. This allows for fast and dynamic property access.
+Hidden Classes:
+To optimize property access, JavaScript engines use hidden classes to track the structure of objects. When an object is created, it is associated with a hidden class. As properties are added or removed, the hidden class is updated accordingly.
+Accessing properties of objects with the same hidden class is faster, as the engine can predict the object's layout and optimize property access.
+Property Access and Mutability:
+JavaScript objects are mutable, meaning their properties can be modified, added, or removed. However, the mutability of objects can impact performance, especially when it comes to property access.
+Direct Property Access:
+// Direct property access
+console.log(car.make); // Output: Toyota
+Computed Property Access:
+// Computed property access
+const propertyName = 'model';
+console.log(car[propertyName]); // Output: Camry
+Object Methods and Prototypes:
+JavaScript objects can also have methods and inherit properties and methods from prototypes, forming the basis of JavaScript's prototypal inheritance model.
+// Object with a method and prototype
+const person = {
+  name: 'John',
+  greet: function() {
+    console.log(`Hello, ${this.name}!`);
+  },
+};
+// Creating an object with a prototype
+const employee = Object.create(person);
+employee.jobTitle = 'Developer';
+employee.greet(); // Output: Hello, undefined! (due to missing name property in employee object)
+Conclusion:
+Understanding the internal representation of objects in JavaScript provides insights into how the language efficiently manages and manipulates data. The combination of dictionaries and hidden classes allows JavaScript to offer a flexible and dynamic object-oriented programming experience. As you explore the depths of JavaScript development, a solid grasp of object internals empowers you to write more efficient and performant code, leveraging the full potential of this versatile language. Objects, with their dynamic nature, remain at the heart of JavaScript's expressive power, enabling developers to build robust and scalable applications.
+
+                                                                  About IP address, port, HTTP methods, MAC address
+1. IP Address (Internet Protocol Address):
+An IP address is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. IP addresses serve two main purposes: host or network interface identification and location addressing. There are two types of IP addresses:
+IPv4 (Internet Protocol version 4): This is the most widely used version of IP addresses and is expressed as a series of four numbers separated by dots (e.g., 192.168.0.1).
+IPv6 (Internet Protocol version 6): With the exhaustion of IPv4 addresses, IPv6 was introduced to provide a vastly expanded address space. IPv6 addresses are represented as a series of hexadecimal numbers separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+IP addresses are essential for routing data packets across networks, allowing devices to communicate with each other on the Internet.
+2. Port:
+In computer networking, a port is a communication endpoint that identifies a specific process or service on a device. Ports are used to distinguish between multiple network services running on the same device. Ports are divided into three ranges:
+Well-known ports (0-1023): These are reserved for system services and commonly used applications. For example, HTTP uses port 80, and HTTPS uses port 443.
+Registered ports (1024-49151): These ports are assigned by the Internet Assigned Numbers Authority (IANA) to specific services or applications.
+Dynamic or private ports (49152-65535): These ports can be used by any application for communication.
+When data is sent over the Internet, it is tagged with both an IP address and a port number to ensure it reaches the correct destination process on the target device.
+3. HTTP Methods:
+HTTP (Hypertext Transfer Protocol) methods, also known as HTTP verbs, define the actions that a client (such as a web browser) can perform on a resource identified by a URL. Common HTTP methods include:
+GET Requests data from a specified resource.
+POST: Submits data to be processed to a specified resource.
+PUT: Updates a resource or creates a new resource if it does not exist.
+DELETE: Deletes the specified resource.
+PATCH: Applies partial modifications to a resource.
+These methods allow for various interactions between clients and servers, enabling the implementation of functionalities like retrieving information, submitting data, and modifying resources on the web.
+4. MAC Address (Media Access Control Address):
+A MAC address is a unique identifier assigned to a network interface controller (NIC) for communications at the data link layer of a network segment. MAC addresses are used for network communication on the local network and are usually assigned by the manufacturer of the network interface.
+A MAC address is a 48-bit (or 64-bit in the case of EUI-64) identifier, typically represented as six pairs of hexadecimal digits separated by colons or hyphens (e.g., 00:1A:2B:3C:4D:5E). MAC addresses are crucial for the proper functioning of Ethernet and Wi-Fi networks, as they help devices identify each other within the local network.
+Understanding these networking concepts is fundamental to navigating the complexities of the Internet and building robust, interconnected systems. Whether you're a network administrator, developer, or curious tech enthusiast, a solid grasp of IP addresses, ports, HTTP methods, and MAC addresses is essential for effective communication and data exchange in the digital realm.
