@@ -1,4 +1,4 @@
-Blog on Difference between HTTP1.1 vs HTTP2
+                                                             Blog on Difference between HTTP1.1 vs HTTP2
 Introduction:
 Significant advancements in web protocols have marked the evolution of the World Wide Web. Two of the most widely used versions, HTTP/1.1 and HTTP/2 have played crucial roles in shaping the way data is transferred between clients and servers. In this blog post, we'll explore the key differences between HTTP//1.1 and HTTP/2, shedding light on how these improvements have enhanced the performance and efficiency of web communication.
 Multiplexing and Concurrent Connections:
